@@ -39,6 +39,11 @@ public class Constants {
             testKeyDir.mkdirs();
         }
 
+        File testInputDir = new File(INIT_INPUT_DIR);
+        if (!testInputDir.exists()) {
+            testInputDir.mkdirs();
+        }
+
         File testoutput_encrypt = new File(CIPHERTEXT_FILE_DIR);
         if (!testoutput_encrypt.exists()) {
             testoutput_encrypt.mkdir();
