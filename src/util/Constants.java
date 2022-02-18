@@ -32,4 +32,21 @@ public class Constants {
     public static File SELECT_CIPHERTEXT_FOLDER = new File("");
     public static File[] LIST_CIPHERTEXT_FILE;
     public static File OUTPUT_DECRYPT_FILE = new File("");
+
+    public static void checkFolder() {
+        File testKeyDir = new File(INIT_KEY_DIR);
+        if (!testKeyDir.exists()) {
+            testKeyDir.mkdirs();
+        }
+
+        File testoutput_encrypt = new File(CIPHERTEXT_FILE_DIR);
+        if (!testoutput_encrypt.exists()) {
+            testoutput_encrypt.mkdir();
+        }
+
+        File testoutput_decrypt = new File(DECRYPT_FILE_DIR);
+        if (!testoutput_decrypt.exists()) {
+            testoutput_decrypt.mkdir();
+        }
+    }
 }
